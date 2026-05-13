@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel's on Mira</title>
+    <link rel="icon" href="./imgs/viagem.webp" type="image/png" />
+    <style>
+      :root {
+        --vermelho-fundo: #fc6a6a80;
+        --text: #5f5a51;
+        --text-cabeça: #e8e0d4;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 32px;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .home a {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        font-weight: 700;
+        color: #5a0606;
+        letter-spacing: 8px;
+        text-decoration: none;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 28px;
+      }
+
+      .nav-links a {
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 3px;
+        transition: color 0.2s;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: #fff;
+        transition: width 0.25s;
+      }
+
+      .nav-links a:hover {
+        color: #fff;
+      }
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      header {
+        padding: 56px 32px 64px;
+        text-align: center;
+        height: 80vh;
+        background-color: var(--vermelho-fundo);
+        box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.5);
+        margin-bottom: 170px;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 72px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.1;
+        padding-top: 30px;
+      }
+
+      header p {
+        font-size: 24px;
+        color: var(--text);
+        line-height: 1.9;
+        max-width: 780px;
+        margin: 0 auto;
+        font-weight: 300;
+        padding-top: 50px;
+        margin-bottom: 70px;
+      }
+      header img {
+        width: 10%;
+      }
+      hr {
+        border-radius: 20px;
+        width: 300px;
+        margin-bottom: 30px;
+        border: solid 3px #fff;
+      }
+
+      .bar {
+        color: goldenrod;
+      }
+      .bar-upp {
+        color: rgb(84, 138, 240);
+      }
+      .bar-kyoto {
+        color: rgb(165, 24, 24);
+      }
+      body {
+        color: var(--text);
+        margin: 0;
+        font-weight: 400;
+        min-width: 100vh;
+        font-family: "Josefin Sans", sans-serif;
+        background-color: var(--vermelho-fundo);
+      }
+      .background {
+        background: var(--vermelho-fundo);
+      }
+      h1,
+      h2,
+      h3 {
+        color: var(--text-cabeça);
+        text-align: center;
+      }
+      .text-places {
+        text-align: left;
+        margin: 30px;
+      }
+      .text-n {
+        text-align: center;
+      }
+      .pais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 70px;
+      }
+      .pais .img-j {
+        position: relative;
+        width: 70%;
+      }
+
+      .pais .img-j img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        display: block; /* remove espaço extra embaixo da img */
+      }
+      .pais .img-j h2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 12px 16px;
+        background: #b3a76380;
+      }
+
+      .contato {
+        padding: 60px 32px;
+        text-align: center;
+      }
+
+      .contato h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        margin-bottom: 8px;
+      }
+
+      .contato p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 13px;
+        margin-bottom: 36px;
+        letter-spacing: 0.1em;
+      }
+
+      .form-box {
+        max-width: 480px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .form-box input,
+      .form-box textarea {
+        background: rgba(255, 255, 255, 0.12);
+        border: 0.5px solid rgba(255, 255, 255, 0.3);
+        border-radius: 6px;
+        padding: 14px 18px;
+        color: #fff;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        outline: none;
+        transition: border 0.2s;
+      }
+
+      .form-box input::placeholder,
+      .form-box textarea::placeholder {
+        color: rgba(255, 255, 255, 0.45);
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+      }
+
+      .form-box input:focus,
+      .form-box textarea:focus {
+        border-color: rgba(255, 255, 255, 0.7);
+      }
+
+      .form-box textarea {
+        height: 120px;
+        resize: none;
+      }
+
+      .form-box button {
+        background: rgba(90, 6, 6, 0.7);
+        border: none;
+        border-radius: 6px;
+        padding: 14px;
+        color: #fff;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .form-box button:hover {
+        background: rgba(90, 6, 6, 1);
+      }
+
+      /* Footer */
+      footer {
+        background: rgba(0, 0, 0, 0.25);
+        border-top: 0.5px solid rgba(255, 255, 255, 0.15);
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .footer-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        color: #fff;
+        letter-spacing: 0.1em;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+
+      .footer-links a:hover {
+        color: #fff;
+      }
+
+      .footer-copy {
+        color: rgba(255, 255, 255, 0.35);
+        font-size: 11px;
+        letter-spacing: 0.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <section class="home" id="home">
+        <header>
+          <div class="inner-header">
+            <nav>
+              <div class="home">
+                <a href="#">MIRA </a>
+              </div>
+              <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#cidades">Cidades</a>
+                <a href="#contato">Contate</a>
+              </div>
+            </nav>
+          </div>
+
+          <h1>TOP 3 PAÍSES</h1>
+          <hr />
+          <img src="./imgs/viagem.webp" alt="" />
+          <p class="text-n">
+            Em algum momento da vida, é natural nos perguntarmos em qual outro
+            país moraríamos caso fosse necessário deixar o nosso. Por isso,
+            montei
+            <em>meu ranking</em> dos países em que eu viveria se tivesse que
+            sair do Brasil.
+          </p>
+        </header>
+      </section>
+      <section class="cidades" id="cidades">
+        <main>
+          <h1>CIDADES ESCOLHIDAS</h1>
+          <div class="pais">
+            <div class="img-j">
+              <h2>
+                <span class="bar-kyoto">|</span> Kyoto - Japão
+                <span class="ball">🔴</span>
+              </h2>
+              <img src="./imgs/hq720.jpg" />
+              <p class="text-places">
+                Kyoto é uma das cidades mais tradicionais do Japão, conhecida
+                por unir história, cultura e paisagens encantadoras. Com seus
+                templos antigos, ruas iluminadas por lanternas e jardins
+                tranquilos, a cidade transmite uma atmosfera única que mistura o
+                passado e o presente. Além da arquitetura impressionante, Kyoto
+                também é famosa pelas flores de cerejeira, culinária típica e
+                pela beleza serena que encanta visitantes do mundo inteiro.
+              </p>
+            </div>
+          </div>
+          <div class="pais">
+            <div class="img-j">
+              <h2>
+                <span class="bar">|</span> Hangzou - China
+                <span class="ball">🟡</span>
+              </h2>
+              <img src="./imgs/wpfd.webp" />
+              <p class="text-places">
+                Hangzhou é uma cidade chinesa famosa por suas paisagens naturais
+                e pela harmonia entre modernidade e tradição. Conheida pelo
+                deslumbrante Lago Oeste, a cidade oferece templos históricos,
+                pagodes e jardins que criam cenários únicos e tranquilos. Além
+                de sua beleza cultural, Hangzhou também se destaca como um
+                importante centro tecnológico da China, reunindo inovação,
+                arquitetura moderna e uma rica herança histórica em um só lugar.
+              </p>
+            </div>
+          </div>
+          <div class="pais">
+            <div class="img-j">
+              <h2>
+                <span class="bar-upp">|</span> Uppsala - Suécia
+                <span class="ball">🔵</span>
+              </h2>
+              <img src="./imgs/upscalemedia-transformed.webp" />
+              <p>
+                Uppsala é uma das cidades mais históricas da Suécia, conhecida
+                por sua arquitetura encantadora, atmosfera tranquila e forte
+                tradição acadêmica. Lar de uma das universidades mais antigas da
+                Europa, a cidade combina construções medievais, catedrais
+                imponentes e belas paisagens às margens do rio Fyris. Durante a
+                noite, as luzes refletidas na água criam um cenário acolhedor
+                que destaca ainda mais o charme cultural e histórico de Uppsala.
+              </p>
+            </div>
+          </div>
+        </main>
+      </section>
+      <section class="contato">
+        <h2>Tem alguma dica?</h2>
+        <p>Me conta um lugar que você recomenda!</p>
+        <div class="form-box">
+          <input type="text" placeholder="Seu nome" />
+          <input type="email" placeholder="Seu e-mail" />
+          <textarea
+            placeholder="Qual lugar você recomendaria e por quê?"
+          ></textarea>
+          <button type="submit">Enviar recomendação</button>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <span class="footer-logo">Mira</span>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#cidades">Cidades</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <span class="footer-copy">© 2025 · Travel's on Mira</span>
+      </footer>
+    </div>
+  </body>
+</html>

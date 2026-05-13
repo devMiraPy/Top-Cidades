@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Geek</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-in">
+        <nav>
+          <div class="home">
+            <a href="#home">Geekando◎</a>
+          </div>
+          <div class="nav-links">
+            <a href="#vertical">Vertical</a>
+            <a href="#mosaico">Mosaico</a>
+            <a href="#video">Videos</a>
+            <a href="#contato">Contatos</a>
+          </div>
+        </nav>
+      </div>
+      <section id="home" class="home"></section>
+      <div class="hor-page">
+        <h1>Personagens Iconicos Para A História Dos Games</h1>
+
+        <div class="horizontal">
+          <span class="up"><img src="./img/crash.jpg" alt="" /></span>
+          <span class="up"><img src="./img/dkcountry.jpg" alt="" /></span>
+          <span class="up"><img src="./img/sonic.png" alt="" /></span>
+          <span class="up"><img src="./img/zelda.jpg" alt="" /></span>
+          <span class="up"><img src="./img/mario.png" alt="" /></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="vertical" class="vertical">
+        <div class="img-vertical">
+          <span class="right"><img src="./img/crash.jpg" alt="" /></span>
+          <span class="right"><img src="./img/dkcountry.jpg" alt="" /></span>
+          <span class="right"><img src="./img/sonic.png" alt="" /></span>
+          <span class="right"><img src="./img/zelda.jpg" alt="" /></span>
+          <span class="right"><img src="./img/mario.png" alt="" /></span>
+        </div>
+      </section>
+
+      <section id="mosaico" class="mosaico">
+        <div class="grid">
+          <span class="up"><img src="./img/crash.jpg" alt="" /></span>
+          <span class="up"><img src="./img/dkcountry.jpg" alt="" /></span>
+          <span class="up"><img src="./img/sonic.png" alt="" /></span>
+          <span class="up"><img src="./img/zelda.jpg" alt="" /></span>
+          <span class="up"><img src="./img/mario.png" alt="" /></span>
+        </div>
+      </section>
+
+      <section id="video" class="video">
+       <h1 class="video-text">Speedruns Famosas</h1>
+        <div class="videos-grid">
+          <div class="video-card">
+            <video controls>
+              <source
+                src="./img/Ocarina of Time WORLD RECORD Defeat Ganon Speedrun [commentated] - bradyONE (720p, h264, youtube).mp4"
+                type="video/mp4"
+              />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <p class="video-texto">The legend of Zelda - Ocarina Of Time Speedrun</p>
+          </div>
+
+          <div class="video-card">
+            <video controls>
+              <source
+                src="./img/Super Mario World Finished In Under 10 Minutes (Speedrun) - IGN (480p, h264, youtube).mp4"
+                type="video/mp4"
+              />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <p class="video-texto">Speedrun - SuperMarioWorld</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+          <section id="contato" class="section-form">
+        <h1>Faça parte da comunidade!</h1>
+      </p>
+
+      <div class="form-wrapper">
+        <form class="contact-form" action="#" method="post">
+          <div class="field">
+            <label for="nome">Nome Completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Seu nome"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seu@email.com"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Crie uma senha"
+              required
+              minlength="6"
+            />
+          </div>
+
+          <div class="field">
+            <label for="interesse">Área de Interesse</label>
+            <select id="interesse" name="interesse" required>
+              <option value="" disabled selected>Selecione uma área</option>
+              <option value="paisagens">Paisagens</option>
+              <option value="fauna">Fauna Selvagem</option>
+              <option value="flora">Flora e Botânica</option>
+              <option value="oceanos">Oceanos e Rios</option>
+              <option value="astrofoto">Astrofotografia</option>
+              <option value="macro">Fotografia Macro</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="cidade">Sua Cidade</label>
+            <input
+              list="cidades"
+              id="cidade"
+              name="cidade"
+              placeholder="Digite ou escolha..."
+            />
+            <datalist id="cidades">
+              <option value="São Paulo" />
+              <option value="Rio de Janeiro" />
+              <option value="Belo Horizonte" />
+              <option value="Brasília" />
+              <option value="Curitiba" />
+              <option value="Porto Alegre" />
+              <option value="Salvador" />
+              <option value="Recife" />
+              <option value="Manaus" />
+              <option value="Fortaleza" />
+            </datalist>
+          </div>
+
+          <div class="field field-full">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="5"
+              placeholder="Conte-nos sobre seu projeto ou dúvida..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="field field-full">
+            <button type="submit" class="btn-submit">Enviar Mensagem →</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+
+    <hr>
+    <p>© 2025 Geekando◎ - todos os direitos reservados</p>
+
+
+  </footer>
+
+
+
+</body>
+</html>
